@@ -1,5 +1,6 @@
-(function(exports, document, undefined){
+(function(exports, undefined){
     'use strict';
+    var document = exports.document;
     function Ajax(){
         if(!(this instanceof Ajax)) return;
         return this;
@@ -80,4 +81,4 @@
         }
     };
     exports.Ajax = Ajax;
-})(window, document);
+})(window);
