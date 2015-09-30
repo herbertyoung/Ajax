@@ -44,7 +44,7 @@
                         }else if(_this.opts.dataType === 'xml' || _this.opts.dataType === 'XML'){
                             _this.opts.success && _this.opts.success(_this.xhr.responseXML, 'success', _this.xhr);
                         }else if(_this.opts.dataType === 'json' || _this.opts.dataType === 'JSON'){
-                            _this.opts.success && _this.opts.success(JSON.parse(_this.xhr.responseText), 'success', _this.xhr);
+                            _this.opts.success && _this.opts.success(_this.xhr.responseText && JSON.parse(_this.xhr.responseText), 'success', _this.xhr);
                         }
                     }else if(_this.xhr.status != 200){
                         _this.opts.error && _this.opts.error(_this.xhr, 'error');
